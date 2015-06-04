@@ -10,6 +10,13 @@ a {
 	color: #000;
 }
 
+#clip {
+	width: 100%;
+  	height: 100%;
+  	position: fixed;
+  	left: 0;
+  	top: 0;
+}
 .strang {
 	color: #D71922;
 	font-weight: bold;
@@ -23,11 +30,13 @@ img.bottom{
 	top: 600px;
 }
 
-#header {
-	background-color: rgb(215, 215, 215);
+#intro-page {
+	background-color: #47C1F2;
 	width: 100%;
-	position: fixed;
-	z-index: 100;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .logo-cell {
@@ -49,19 +58,40 @@ img.bottom{
 	background: url(logo-plane.png) no-repeat -2px -11px;
 }
 
-@-webkit-keyframes vh{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-@-moz-keyframes vh{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-@keyframes vh{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+@-webkit-keyframes vh {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+@-moz-keyframes vh {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+@keyframes vh {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
 
 .logo img {
 	width: 80px;
-    height: 80px;
-    top: -12px;
-    left: 78px;
-    position: absolute;
-    -webkit-animation: vh 0.1s steps(6) infinite;
-    -moz-animation: vh 0.1s steps(6) infinite;
-    animation: vh 0.1s steps(6) infinite;
+	height: 80px;
+	top: -12px;
+	left: 78px;
+	position: absolute;
+	-webkit-animation: vh 0.1s steps(6) infinite;
+	-moz-animation: vh 0.1s steps(6) infinite;
+	animation: vh 0.1s steps(6) infinite;
 }
 
 .tringle-bar {
@@ -112,9 +142,30 @@ img.bottom{
 	height: auto!important;
 }
 
-@-webkit-keyframes rot{0%{background-position:center 0}100%{background-position:center -600px}}
-@-moz-keyframes rot{0%{background-position:center 0}100%{background-position:center -600px}}
-@keyframes rot{0%{background-position:center 0}100%{background-position:center -600px}}
+@-webkit-keyframes rot {
+	0% {
+		background-position:center 0
+	}
+	100% {
+		background-position:center -600px
+	}
+}
+@-moz-keyframes rot {
+	0% {
+		background-position:center 0
+	}
+	100% {
+		background-position:center -600px
+	}
+}
+@keyframes rot {
+	0% {
+		background-position:center 0
+	}
+	100% {
+		background-position:center -600px
+	}
+}
 
 .airscrew {
 	display: block;
@@ -160,10 +211,10 @@ img.bottom{
 .self-cnt {
 	width: 780px;
 	height: 450px;
-	margin-left: 50%;
 	position: absolute;
 	top: 300px;
-	left: -390px;
+	left: 50%;
+	margin-left: -390px;
 	z-index: 100;
 }
 
@@ -191,15 +242,19 @@ div.photo-box{
 }
 
 .who-am-i {
-	position: relative;
+	width: 200px;
+	position: absolute;
 	top: 100px;
+	left: 50%;
 	z-index: 100;
-	margin-top: 30px;
+	margin-left: -100px;
 }
 
-.who-am-i h2, h3, p {
+.who-am-i h2, .who-am-i h3, .who-am-i p {
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .about-me {
@@ -224,6 +279,14 @@ div.photo-box{
 	margin-left: -400px;
 }
 
+.about-me .introduction {
+	width: 500px;
+	position: absolute;
+	top: 60%;
+	left: 55%;
+	/*margin-left: -400px;*/
+}
+
 .about-me ul li {
 	list-style: none;
 	line-height: 35px;
@@ -233,4 +296,122 @@ div.photo-box{
 	display: inline-block;
 	text-align: right;
 	width: 100px;
+}
+
+.star {
+	position: absolute;
+}
+
+.star-top-left {
+	top: 250px;
+	left: 350px;
+}
+
+.star-top-right {
+  	top: 300px;
+	right: 200px;
+}
+
+.star-bottom-left {
+	bottom: 100px;
+	left: 200px;
+}
+
+.star-bottom-right {
+	bottom: 10px;
+	right: 500px;
+}
+
+@-webkit-keyframes fadeScale {
+    from {
+        transform: scale(0.8);
+        opacity: 0.8
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+@-moz-keyframes fadeScale {
+    from {
+        transform: scale(0.8);
+        opacity: 0.8
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+@keyframes fadeScale {
+    from {
+        transform: scale(0.8);
+        opacity: 0.8
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.star img {
+	height: 40px;
+	width: auto;
+	-webkit-animation: fadeScale 1s infinite alternate ease-in;
+   	-moz-animation: fadeScale 1s infinite alternate ease-in;
+    	animation: fadeScale 1s infinite alternate ease-in
+}
+
+.star img {
+	height: 40px;
+	width: auto;
+	-webkit-animation: fadeScale 1s infinite alternate ease-in;
+   	-moz-animation: fadeScale 1s infinite alternate ease-in;
+    	animation: fadeScale 1s infinite alternate ease-in
+}
+
+.clouds-bar {
+	width: 100%;
+	position: absolute;
+	z-index: 1200;
+}
+
+@-webkit-keyframes fadeScale {
+    from {
+        transform: scale(0.98);
+        opacity: 0.9
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+@-moz-keyframes fadeScale {
+    from {
+        transform: scale(0.98);
+        opacity: 0.9
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+@keyframes fadeScale {
+    from {
+        transform: scale(0.98);
+        opacity: 0.9
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+.cloud-1 {
+	position: absolute;
+	top: 500px;
+	left: 200px;
+}
+.cloud-1 img {
+	-webkit-animation: fadeScale 1s infinite alternate ease-in-out;
+   	-moz-animation: fadeScale 1s infinite alternate ease-in-out
+    	animation: fadeScale 1s infinite alternate ease-in-out
 }
