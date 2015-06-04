@@ -217,11 +217,11 @@ div.photo-box{
 }
 
 .about-me ul {
-	width: 270px;
+	width: 350px;
 	position: absolute;
 	top: 60%;
 	left: 50%;
-	margin-left: -300px;
+	margin-left: -400px;
 }
 
 .about-me ul li {
@@ -232,5 +232,5 @@ div.photo-box{
 .about-me ul li span {
 	display: inline-block;
 	text-align: right;
-	width: 70px;
+	width: 100px;
 }
