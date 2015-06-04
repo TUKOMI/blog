@@ -2,7 +2,7 @@
 	<div id="intro-page"
 		data-0="top: 0;"
 		data-1000="top:0;"
-		data-1200="top:-100px;"
+		data-1200="top: -50px;"
 		data-1400="top: -200px;"
 		data-1700="top: -300px;"
 		data-1900="top: -400px;"
@@ -45,10 +45,10 @@
 					<%=image_tag("logo-self.png", class: "photo") %>
 				</div>
 				<div class="who-am-i">
-					<h2><%= Admin.last.name %></h2>
+					<h2><%= @admin.name %></h2>
 					<h3>正在起飞的前端工程师</h3>
 					<p>
-						<a href="mailto:<%= Admin.last.email%>" class="strang email">EMAIL</a>
+						<a href="mailto:<%= @admin.email%>" class="strang email">EMAIL</a>
 					</p>
 				</div>
 			</div>
@@ -65,13 +65,13 @@
 			data-1000="top: -50px;"
 			data-1900="top: -300px;" >
 			<ul>
-				<li><span>姓名&nbsp;|&nbsp;</span><%= Admin.first.name %></li>
-				<li><span>手机&nbsp;|&nbsp;</span><%= Admin.first.phone %></li>
-				<li><span>邮箱&nbsp;|&nbsp;</span><a href="mailto:<%= Admin.last.email%>"><%= Admin.last.email%></a></li>
-				<li><span>博客&nbsp;|&nbsp;</span><a href="<%= Admin.first.blog_url %>">欢迎猛击</a></li>
-				<li><span>教育背景&nbsp;|&nbsp;</span><%= Admin.first.edu_info %></li>
+				<li><span>姓名&nbsp;|&nbsp;</span><%= @admin.name %></li>
+				<li><span>手机&nbsp;|&nbsp;</span><%= @admin.phone %></li>
+				<li><span>邮箱&nbsp;|&nbsp;</span><a href="mailto:<%= @admin.email%>"><%= @admin.email%></a></li>
+				<li><span>博客&nbsp;|&nbsp;</span><a href="<%= @admin.blog_url %>">欢迎猛击</a></li>
+				<li><span>教育背景&nbsp;|&nbsp;</span><%= @admin.edu_info %></li>
 				<% if false %>
-				<li><span>GitHub&nbsp;|&nbsp;</span><a href="<%= Admin.first.github_url%>">欢迎猛击</a></li>
+				<li><span>GitHub&nbsp;|&nbsp;</span><a href="<%= @admin.github_url%>">欢迎猛击</a></li>
 				<% end %>
 			</ul>
 			<div class="introduction">
@@ -101,8 +101,18 @@
 				data-3000="left: 150px" >
 				<%= image_tag("cloud-1.svg", height: 171 )%>
 			</div>
+			<div class="cloud-2"
+				data-0="right: 50px;"
+				data-1500="right: 350px;"
+				data-3000="right: 50px"
+				>
+				<%= image_tag("cloud-2.svg", height: 171 )%>
+			</div>
 		</div>
 	</div>
+	<idv id="skills-page" data-1300="top:200px" data-1700="top: 0px" >
+
+	</idv>
 </div>
 <script>
 
